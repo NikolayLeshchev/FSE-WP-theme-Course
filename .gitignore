@@ -1,26 +1,26 @@
-# 1. Игнорируем абсолютно всё в корне
+# 1. Ignore everything in root
 /*
 
-# 2. Исключаем (разрешаем) только нужные файлы
+# 2. Allow necessary files
 !/.gitignore
 !/README.md
 !/wp-content/
 
-# 3. Внутри wp-content игнорируем всё
+# 3. Ignore everything inside wp-content
 /wp-content/*
 
-# 4. Разрешаем папки плагинов и тем (но не их содержимое пока что)
+# 4. Allow themes and plugins folders
 !/wp-content/plugins/
 !/wp-content/themes/
 
-# 5. Игнорируем все стандартные темы и плагины внутри
+# 5. Ignore all standard themes and plugins
 /wp-content/themes/*
 /wp-content/plugins/*
 
-# 6. РАЗРЕШАЕМ ТВОЮ ТЕМУ (вот тут магия)
+# 6. Allow custom theme
 !/wp-content/themes/udemy/
 
-# 7. Игнорируем мусор разработки
+# 7. Ignore development junk
 node_modules/
 dist/
 .DS_Store
