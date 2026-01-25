@@ -1,48 +1,27 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# 1. Игнорируем абсолютно всё в корне
+/*
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# 2. Исключаем (разрешаем) только нужные файлы
+!/.gitignore
+!/README.md
+!/wp-content/
 
-# Configuration
-wp-config.php
+# 3. Внутри wp-content игнорируем всё
+/wp-content/*
 
-# Example themes
-/wp-content/themes/twenty*/
+# 4. Разрешаем папки плагинов и тем (но не их содержимое пока что)
+!/wp-content/plugins/
+!/wp-content/themes/
 
-# Example plugin
-/wp-content/plugins/hello.php
+# 5. Игнорируем все стандартные темы и плагины внутри
+/wp-content/themes/*
+/wp-content/plugins/*
 
-# Uploads
-/wp-content/uploads/
+# 6. РАЗРЕШАЕМ ТВОЮ ТЕМУ (вот тут магия)
+!/wp-content/themes/udemy/
 
-# Log files
-*.log
-
-# htaccess
-/.htaccess
-
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# 7. Игнорируем мусор разработки
+node_modules/
+dist/
+.DS_Store
+local-xdebuginfo.php
