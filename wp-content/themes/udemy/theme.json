@@ -172,5 +172,12 @@
             },
             "blockGap": "4rem"
         }
-    }
+    },
+    "customTemplates" : [
+        {
+            "name" : "full-width-page",
+            "title" : "Full width page",
+            "post-types" : [ "page" ]
+        }
+    ]
 }
