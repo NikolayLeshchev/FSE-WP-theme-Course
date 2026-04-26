@@ -17,8 +17,9 @@
 /wp-content/themes/*
 /wp-content/plugins/*
 
-# 6. Allow custom theme
+# 6. Allow custom theme and plugin
 !/wp-content/themes/udemy/
+!/wp-content/plugins/udemy-plus
 
 # 7. Ignore development junk
 node_modules/
