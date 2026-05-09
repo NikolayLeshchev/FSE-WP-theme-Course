@@ -17,3 +17,13 @@ if(!function_exists('add_action')){
     echo "Seems like you lost. It's plugin's file.";
     exit;
 }
+
+// Setup
+define('UP_PLUGIN_DIR', plugin_dir_path(__FILE__));
+
+
+// Includes
+include(UP_PLUGIN_DIR . 'includes/register-blocks.php');
+
+// Hooks
+add_action('init', 'up_register_blocks');
