@@ -1,6 +1,6 @@
 <?php
 
-function up_rest_api_init_handler($request){
+function up_rest_api_signup_handler($request){
     $response = ['status' => 1];
     $params = $request->get_json_params();
 

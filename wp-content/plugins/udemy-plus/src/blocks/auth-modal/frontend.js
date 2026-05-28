@@ -90,4 +90,49 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         }
     })
+
+    signinForm.addEventListener('submit', async event => {
+        event.preventDefault()
+
+        const signinFieldset = signinForm.querySelector('fieldset')
+        signinFieldset.setAttribute('disabled', true)
+
+        const signinStatus = signinForm.querySelector('#signin-status')
+        signinStatus.innerHTML = `
+            <div class="modal-status modal-status-info">
+                Prease wait. We are checking your account.
+            </div>
+        `
+
+        const formData = {
+            user_login: signinForm.querySelector('#si-email').value,
+            password: signinForm.querySelector('#si-password').value
+        }
+
+        const response = await fetch(up_auth_rest.signin, {
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        const responseJSON = await response.json()
+
+        if(responseJSON.status === 2) {
+            signinStatus.innerHTML = `
+                <div class="modal-status modal-status-success">
+                    Success! You are loged in.
+                </div>
+            `
+            location.reload()
+        } else {
+            signinFieldset.removeAttribute('disabled')
+            signinStatus.innerHTML = `
+                <div class="modal-status modal-status-danger">
+                    There is no such user. Please check email or password.
+                </div>
+            `
+        }
+    })
 })
