@@ -22,11 +22,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@wordpress/scripts": "^32.3.0"
+    "@wordpress/scripts": "^32.4.0"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/material": "^9.0.1"
+    "@mui/material": "^5.18.0"
   }
 }
