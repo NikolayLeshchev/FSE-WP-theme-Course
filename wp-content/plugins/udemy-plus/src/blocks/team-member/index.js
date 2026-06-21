@@ -8,6 +8,7 @@ import {
 } from '@wordpress/components';
 import icons from '../../icons.js';
 import './main.css';
+import { imageListClasses } from '@mui/material';
 
 registerBlockType('udemy-plus/team-member', {
   icon: {
@@ -36,15 +37,28 @@ registerBlockType('udemy-plus/team-member', {
         </InspectorControls>
         <div {...blockProps}>
           <div className="author-meta">
-            <img /> 
+            { imgURL && <img src={imgURL} alt={imgAlt} /> }
+            
             <MediaPlaceholder 
               allowedTypes={['image']}
               accept={'image/*'}
               onSelect={img => {
-                console.log(img)
+                setAttributes({
+                  imgID: img.id,
+                  imgAlt: img.alt,
+                  imgURL: img.sizes.teamMember.url
+                })
               }}
               onError={error => {
                 console.error(error)
+              }}
+              disableMediaButtons={imgURL}
+              onSelectURL={url => {
+                setAttributes({
+                  imgID: null,
+                  imgAlt: null,
+                  imgURL: url
+                })
               }}
             />
             <p>
