@@ -1,9 +1,9 @@
 import { 
-  useBlockProps, InspectorControls, RichText, MediaPlaceholder
+  useBlockProps, InspectorControls, RichText, MediaPlaceholder, BlockControls, MediaReplaceFlow
 } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { 
-  PanelBody, TextareaControl, Spinner
+  PanelBody, TextareaControl, Spinner, ToolbarButton
 } from '@wordpress/components';
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob';
 import { useState } from '@wordpress/element';
@@ -16,8 +16,64 @@ export default function({ attributes, setAttributes }) {
 
     const [imgPreview, setImgPrewiew] = useState(imgURL)
 
+    const selectImg = img => {
+      let newImgURL = null
+
+      if(isBlobURL(img.url)) {
+        newImgURL = img.url
+      } else {
+        newImgURL = img.sizes ? img.sizes.teamMember.url : 
+        img.media_details.sizes.teamMember.source_url
+
+        setAttributes({
+          imgID: img.id,
+          imgAlt: img.alt,
+          imgURL: newImgURL
+        })
+
+        revokeBlobURL(imgPreview)
+      }
+      setImgPrewiew(newImgURL)
+      
+    }
+
+    const selectImgURL = url => {
+      setAttributes({
+        imgID: null,
+        imgAlt: null,
+        imgURL: url
+      });
+
+      setImgPrewiew(url);
+    }
+
     return (
       <>
+        { imgPreview &&
+          <BlockControls group="inline">
+              <MediaReplaceFlow 
+                name={__('Replace Image', 'udemy-plus')}
+                mediaId={imgID}
+                mediaURL={imgURL}
+                allowedTypes={['image']}
+                accept={'image/*'}
+                onError={error => console.error(error)}
+                onSelect={selectImg}
+                onSelectURL={selectImgURL}
+              />
+              <ToolbarButton onClick={()=>{ 
+                setAttributes({
+                  imgID: 0,
+                  imgAlt: "",
+                  imgURL: "",
+                });
+                
+                setImgPrewiew("");
+              }}>
+                {__('Remove Image', 'udemy-plus')}
+              </ToolbarButton>
+          </BlockControls>
+        }
         <InspectorControls>
           <PanelBody title={__('Settings', 'udemy-plus')}>
             <TextareaControl 
@@ -40,38 +96,12 @@ export default function({ attributes, setAttributes }) {
               allowedTypes={['image']}
               accept={'image/*'}
               
-              onSelect={img => {
-
-                let newImgURL = null
-
-                if(isBlobURL(img.url)) {
-                  newImgURL = img.url
-                } else {
-                  newImgURL = img.sizes ? img.sizes.teamMember.url : 
-                  img.media_details.sizes.teamMember.source_url
-
-                  setAttributes({
-                    imgID: img.id,
-                    imgAlt: img.alt,
-                    imgURL: newImgURL
-                  })
-
-                  revokeBlobURL(imgPreview)
-                }
-                setImgPrewiew(newImgURL)
-                
-              }}
+              onSelect={selectImg}
               onError={error => {
                 console.error(error)
               }}
               disableMediaButtons={imgPreview}
-              onSelectURL={url => {
-                setAttributes({
-                  imgID: null,
-                  imgAlt: null,
-                  imgURL: url
-                })
-              }}
+              onSelectURL={selectImgURL}
             />
             <p>
               <RichText 
