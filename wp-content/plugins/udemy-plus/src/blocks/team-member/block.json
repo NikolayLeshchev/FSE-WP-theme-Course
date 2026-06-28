@@ -8,27 +8,37 @@
     "textdomain": "udemy-plus",
     "attributes": {
         "name": {
-        "type": "string"
+            "type": "string"
         },
         "title": {
-        "type": "string"
+            "type": "string"
         },
         "bio": {
-        "type": "string"
+            "type": "string"
         },
         "imgID": {
-        "type": "number",
-        "default": 0
+            "type": "number",
+            "default": 0
         },
         "imgAlt": {
-        "type": "string",
-        "default": ""
+            "type": "string",
+            "default": ""
         },
         "imgURL": {
-        "type": "string"
+            "type": "string"
         },
         "socialHandles": {
-        "type": "array"
+            "type": "array",
+            "default": [
+                {
+                    "url": "https://facebook.com",
+                    "icon": "facebook"
+                },
+                {
+                    "url": "https://instagram.com",
+                    "icon": "instagram"
+                }
+            ]
         }
     },
     "editorScript": "file:./index.js",
