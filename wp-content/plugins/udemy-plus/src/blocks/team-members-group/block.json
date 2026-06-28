@@ -8,14 +8,17 @@
     "textdomain": "udemy-plus",
     "attributes": {
         "columns": {
-        "type": "number",
-        "default": 3
-        },
+            "type": "number",
+            "default": 3
+            },
         "imageShape": {
-        "type": "string",
-        "default": "hexagon"
-        }
+            "type": "string",
+            "default": "hexagon"
+            }
     },
     "editorScript": "file:./index.js",
-    "style": "file:./index.css"
+    "style": "file:./index.css",
+    "providesContext": {
+        "udemy-plus/image-shape": "imageShape"
+    }
 }
