@@ -4,10 +4,12 @@ import {
 } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { 
-  PanelBody, TextareaControl
+  PanelBody, TextareaControl, Spinner
 } from '@wordpress/components';
 import icons from '../../icons.js';
 import './main.css';
+import { isBlobURL, revokeBlobURL } from '@wordpress/blob';
+import { useState } from '@wordpress/element'
 import { imageListClasses } from '@mui/material';
 
 registerBlockType('udemy-plus/team-member', {
@@ -19,6 +21,8 @@ registerBlockType('udemy-plus/team-member', {
       name, title, bio, imgID, imgAlt, imgURL, socialHandles
     } = attributes;
     const blockProps = useBlockProps();
+
+    const [imgPreview, setImgPrewiew] = useState(imgURL)
 
     return (
       <>
@@ -37,22 +41,38 @@ registerBlockType('udemy-plus/team-member', {
         </InspectorControls>
         <div {...blockProps}>
           <div className="author-meta">
-            { imgURL && <img src={imgURL} alt={imgAlt} /> }
+            { imgPreview && <img src={imgPreview} alt={imgAlt} /> }
+            { isBlobURL(imgPreview) && <Spinner /> }
             
             <MediaPlaceholder 
               allowedTypes={['image']}
               accept={'image/*'}
+              
               onSelect={img => {
-                setAttributes({
-                  imgID: img.id,
-                  imgAlt: img.alt,
-                  imgURL: img.sizes.teamMember.url
-                })
+
+                let newImgURL = null
+
+                if(isBlobURL(img.url)) {
+                  newImgURL = img.url
+                } else {
+                  newImgURL = img.sizes ? img.sizes.teamMember.url : 
+                  img.media_details.sizes.teamMember.source_url
+
+                  setAttributes({
+                    imgID: img.id,
+                    imgAlt: img.alt,
+                    imgURL: newImgURL
+                  })
+
+                  revokeBlobURL(imgPreview)
+                }
+                setImgPrewiew(newImgURL)
+                
               }}
               onError={error => {
                 console.error(error)
               }}
-              disableMediaButtons={imgURL}
+              disableMediaButtons={imgPreview}
               onSelectURL={url => {
                 setAttributes({
                   imgID: null,
