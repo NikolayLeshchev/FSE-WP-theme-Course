@@ -20,6 +20,7 @@
 # 6. Allow custom theme and plugin
 !/wp-content/themes/udemy/
 !/wp-content/plugins/udemy-plus
+!/wp-content/plugins/alert-box
 
 # 7. Ignore development junk
 node_modules/
