@@ -6,7 +6,6 @@
 	"title": "Alert Box",
 	"category": "widgets",
 	"description": "Adds an alert box to output important information to the reader.",
-	"icon": "welcome-learn-more",
 	"attributes": {
 		"content": {
 			"type": "string",
@@ -32,5 +31,16 @@
 	"supports": {
 		"html": false,
 		"align": true
-	}
+	},
+	"styles": [
+		{
+			"name": "regular",
+			"label": "Regular",
+			"isDefault": true
+		},
+		{
+			"name": "accented",
+			"label": "Accented"			
+		}
+	]
 }

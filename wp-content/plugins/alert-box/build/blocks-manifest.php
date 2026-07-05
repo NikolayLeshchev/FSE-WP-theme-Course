@@ -9,7 +9,6 @@ return array(
 		'title' => 'Alert Box',
 		'category' => 'widgets',
 		'description' => 'Adds an alert box to output important information to the reader.',
-		'icon' => 'welcome-learn-more',
 		'attributes' => array(
 			'content' => array(
 				'type' => 'string',
@@ -35,6 +34,17 @@ return array(
 		'supports' => array(
 			'html' => false,
 			'align' => true
+		),
+		'styles' => array(
+			array(
+				'name' => 'regular',
+				'label' => 'Regular',
+				'isDefault' => true
+			),
+			array(
+				'name' => 'accented',
+				'label' => 'Accented'
+			)
 		)
 	)
 );
