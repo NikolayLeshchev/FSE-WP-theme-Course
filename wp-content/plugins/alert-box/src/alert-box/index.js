@@ -5,6 +5,7 @@
  */
 import { registerBlockType } from '@wordpress/blocks';
 import icons from '../icons';
+import v1 from './v1'
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -46,5 +47,6 @@ registerBlockType( metadata.name, {
 			textColor: "#111827",
 			className: "is-style-accented",
 		}
-	}]
+	}],
+	deprecated: [v1],
 } );

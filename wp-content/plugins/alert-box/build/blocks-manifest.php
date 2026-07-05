@@ -13,7 +13,7 @@ return array(
 			'content' => array(
 				'type' => 'string',
 				'source' => 'html',
-				'selector' => '.alert-box-content p'
+				'selector' => '.alert-box-content div'
 			),
 			'icon' => array(
 				'type' => 'string',
