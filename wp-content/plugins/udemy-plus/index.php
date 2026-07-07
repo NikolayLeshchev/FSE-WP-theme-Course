@@ -47,3 +47,4 @@ add_action('after_setup_theme', 'up_setup_theme');
 add_filter('image_size_names_choose', 'up_custom_image_sizes');
 add_filter('rest_recipe_query', 'up_rest_recipe_query', 10, 2);
 add_action('admin_menu', 'up_admin_menus');
+add_action('admin_post_up_save_options', 'up_save_options');
