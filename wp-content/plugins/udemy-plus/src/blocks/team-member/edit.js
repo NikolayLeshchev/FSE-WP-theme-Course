@@ -7,7 +7,6 @@ import {
 } from '@wordpress/components';
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob';
 import { useState } from '@wordpress/element';
-import { teal } from '@mui/material/colors';
 
 export default function({ attributes, setAttributes, context, isSelected }) {
     const { 

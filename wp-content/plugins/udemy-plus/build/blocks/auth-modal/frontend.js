@@ -1,1 +1,139 @@
-document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll(".open-modal"),t=document.querySelectorAll(".modal-btn-close, .modal-overlay"),s=document.querySelector(".wp-block-udemy-plus-auth-modal");e.forEach(e=>{e.addEventListener("click",e=>{e.preventDefault(),s.classList.add("modal-show")})}),t.forEach(e=>{e.addEventListener("click",e=>{s.classList.remove("modal-show")})});const a=document.querySelectorAll(".tabs a"),n=document.querySelector("#signin-tab"),o=document.querySelector("#signup-tab");a.forEach(e=>{e.addEventListener("click",e=>{e.preventDefault(),a.forEach(e=>{e.classList.remove("active-tab")}),e.currentTarget.classList.add("active-tab"),"#signin-tab"===e.currentTarget.getAttribute("href")?(n.style.display="block",o.style.display="none"):(n.style.display="none",o.style.display="block")})}),o.addEventListener("submit",async e=>{e.preventDefault();const t=o.querySelector("fieldset");t.setAttribute("disabled",!0);const s=o.querySelector("#signup-status");s.innerHTML='\n            <div class="modal-status modal-status-info">\n                Prease wait. We are creating your account.\n            </div>\n        ';const a={username:o.querySelector("#su-name").value,email:o.querySelector("#su-email").value,password:o.querySelector("#su-password").value},n=await fetch(up_auth_rest.signup,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(a)});2===(await n.json()).status?(s.innerHTML='\n                <div class="modal-status modal-status-success">\n                    Success! Your account has been created.\n                </div>\n            ',location.reload()):(t.removeAttribute("disabled"),s.innerHTML='\n                <div class="modal-status modal-status-danger">\n                    Unable to create account. Please try again later.\n                </div>\n            ')}),n.addEventListener("submit",async e=>{e.preventDefault();const t=n.querySelector("fieldset");t.setAttribute("disabled",!0);const s=n.querySelector("#signin-status");s.innerHTML='\n            <div class="modal-status modal-status-info">\n                Prease wait. We are checking your account.\n            </div>\n        ';const a={user_login:n.querySelector("#si-email").value,password:n.querySelector("#si-password").value},o=await fetch(up_auth_rest.signin,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(a)});2===(await o.json()).status?(s.innerHTML='\n                <div class="modal-status modal-status-success">\n                    Success! You are loged in.\n                </div>\n            ',location.reload()):(t.removeAttribute("disabled"),s.innerHTML='\n                <div class="modal-status modal-status-danger">\n                    There is no such user. Please check email or password.\n                </div>\n            ')})});
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+/*!*******************************************!*\
+  !*** ./src/blocks/auth-modal/frontend.js ***!
+  \*******************************************/
+__webpack_require__.r(__webpack_exports__);
+document.addEventListener('DOMContentLoaded', () => {
+  const openModalBtn = document.querySelectorAll('.open-modal');
+  const modalCloseEl = document.querySelectorAll('.modal-btn-close, .modal-overlay');
+  const modalEl = document.querySelector('.wp-block-udemy-plus-auth-modal');
+  openModalBtn.forEach(el => {
+    el.addEventListener('click', event => {
+      event.preventDefault();
+      modalEl.classList.add('modal-show');
+    });
+  });
+  modalCloseEl.forEach(el => {
+    el.addEventListener('click', event => {
+      modalEl.classList.remove('modal-show');
+    });
+  });
+  const tabs = document.querySelectorAll('.tabs a');
+  const signinForm = document.querySelector('#signin-tab');
+  const signupForm = document.querySelector('#signup-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', event => {
+      event.preventDefault();
+      tabs.forEach(currentTab => {
+        currentTab.classList.remove('active-tab');
+      });
+      event.currentTarget.classList.add('active-tab');
+      const activeTab = event.currentTarget.getAttribute('href');
+      if (activeTab === '#signin-tab') {
+        signinForm.style.display = 'block';
+        signupForm.style.display = 'none';
+      } else {
+        signinForm.style.display = 'none';
+        signupForm.style.display = 'block';
+      }
+    });
+  });
+  signupForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    const signupFieldset = signupForm.querySelector('fieldset');
+    signupFieldset.setAttribute('disabled', true);
+    const signupStatus = signupForm.querySelector('#signup-status');
+    signupStatus.innerHTML = `
+            <div class="modal-status modal-status-info">
+                Prease wait. We are creating your account.
+            </div>
+        `;
+    const formData = {
+      username: signupForm.querySelector('#su-name').value,
+      email: signupForm.querySelector('#su-email').value,
+      password: signupForm.querySelector('#su-password').value
+    };
+    const response = await fetch(up_auth_rest.signup, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+    const responseJSON = await response.json();
+    if (responseJSON.status === 2) {
+      signupStatus.innerHTML = `
+                <div class="modal-status modal-status-success">
+                    Success! Your account has been created.
+                </div>
+            `;
+      location.reload();
+    } else {
+      signupFieldset.removeAttribute('disabled');
+      signupStatus.innerHTML = `
+                <div class="modal-status modal-status-danger">
+                    Unable to create account. Please try again later.
+                </div>
+            `;
+    }
+  });
+  signinForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    const signinFieldset = signinForm.querySelector('fieldset');
+    signinFieldset.setAttribute('disabled', true);
+    const signinStatus = signinForm.querySelector('#signin-status');
+    signinStatus.innerHTML = `
+            <div class="modal-status modal-status-info">
+                Prease wait. We are checking your account.
+            </div>
+        `;
+    const formData = {
+      user_login: signinForm.querySelector('#si-email').value,
+      password: signinForm.querySelector('#si-password').value
+    };
+    const response = await fetch(up_auth_rest.signin, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+    const responseJSON = await response.json();
+    if (responseJSON.status === 2) {
+      signinStatus.innerHTML = `
+                <div class="modal-status modal-status-success">
+                    Success! You are loged in.
+                </div>
+            `;
+      location.reload();
+    } else {
+      signinFieldset.removeAttribute('disabled');
+      signinStatus.innerHTML = `
+                <div class="modal-status modal-status-danger">
+                    There is no such user. Please check email or password.
+                </div>
+            `;
+    }
+  });
+});
+/******/ })()
+;
+//# sourceMappingURL=frontend.js.map
