@@ -29,7 +29,7 @@ function up_activate_plugin() {
         add_option('up_options', [
             'og_title' => get_bloginfo('name'),
             'og_image' => '',
-            'og_desciption' => get_bloginfo('description'),
+            'og_description' => get_bloginfo('description'),
             'enable_og' => 1
         ]);
     }
