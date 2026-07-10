@@ -3,6 +3,7 @@
 function up_plugin_options_alt_page(){
     ?>
         <div class="wrap">
+            <?php settings_errors(); ?>
             <form method="POST" action="options.php">
                 <?php
                     settings_fields('up_options_group');

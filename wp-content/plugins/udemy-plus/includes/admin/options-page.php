@@ -72,7 +72,7 @@ function up_plugins_options_page() {
                     <td>
                     <label for="up_enable_og"> 
                     <input name="up_enable_og" type="checkbox" id="up_enable_og" 
-                        value="1" <?php checked(1, $options['enable_og']); ?> /> 
+                        value="1" <?php checked(1, $options['enable_og'] ?? 0); ?> />
                     <span>Enable</span>
                     </label>
                     </td>
