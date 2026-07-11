@@ -3,7 +3,7 @@ import { useBlockProps, InspectorControls, PanelColorSettings } from '@wordpress
 import { __ } from '@wordpress/i18n'
 
 import block from './block.json'
-import icons from '../../icons'
+import icons from '../../icons.js'
 import './main.css'
 
 registerBlockType(block.name, {
