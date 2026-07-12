@@ -8,4 +8,6 @@ function up_enqueue_block_editor_assets() {
     }
 
     wp_enqueue_script('up_editor');
+    wp_enqueue_style('up_editor_style');
+    add_editor_style(plugins_url('/build/block-editor/index.css', UP_PLUGIN_FILE));
 }

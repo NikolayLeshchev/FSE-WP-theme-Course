@@ -11,4 +11,6 @@ function up_enqueue_scripts() {
         "const up_auth_rest = {$authURLs}",
         'before'
     );
+
+    wp_enqueue_style('up_editor_style');
 }
