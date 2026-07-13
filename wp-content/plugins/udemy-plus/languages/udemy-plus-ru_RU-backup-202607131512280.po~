@@ -1,0 +1,649 @@
+# Copyright (C) 2026 Mikalai Liashchou
+# This file is distributed under the same license as the Udemy Plus plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Udemy Plus 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/udemy-plus\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-07-12T18:35:51+00:00\n"
+"PO-Revision-Date: 2026-07-13 15:09+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: udemy-plus\n"
+"\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"X-Loco-Version: 2.8.6; wp-7.0.1; php-8.1.29"
+
+#. Plugin Name of the plugin
+#: index.php includes/admin/menu.php:5 includes/admin/menu.php:6
+msgid "Udemy Plus"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: index.php
+msgid "https://github.com/NikolayLeshchev/FSE-WP-theme-Course"
+msgstr ""
+
+#. Description of the plugin
+#: index.php
+msgid "A plugin for adding blocks to the theme."
+msgstr ""
+
+#. Author of the plugin
+#: index.php
+msgid "Mikalai Liashchou"
+msgstr ""
+
+#. Author URI of the plugin
+#: index.php
+msgid "https://www.linkedin.com/in/nikolayleshchev/"
+msgstr ""
+
+#: includes/activate.php:5
+msgid "You must update WordPress to use this plugin"
+msgstr ""
+
+#: includes/admin/cuisine-fields.php:6 includes/admin/cuisine-fields.php:19
+msgid "More info URL"
+msgstr ""
+
+#: includes/admin/cuisine-fields.php:8 includes/admin/cuisine-fields.php:23
+msgid "A URL a user can click to learn more information."
+msgstr ""
+
+#: includes/admin/menu.php:14 includes/admin/menu.php:15
+msgid "Udemy Plus Alt"
+msgstr ""
+
+#: includes/admin/options-page.php:8 includes/admin/settings-api.php:8
+msgid "Udemy Plus Settings"
+msgstr ""
+
+#: includes/admin/options-page.php:14
+msgid "Options updated successfully!"
+msgstr ""
+
+#: includes/admin/options-page.php:29 includes/admin/settings-api.php:15
+msgid "Open Graph Title"
+msgstr ""
+
+#: includes/admin/options-page.php:41 includes/admin/settings-api.php:23
+msgid "Open Graph Image"
+msgstr ""
+
+#: includes/admin/options-page.php:56 includes/admin/settings-api.php:31
+msgid "Open Graph Description"
+msgstr ""
+
+#: includes/admin/options-page.php:70 includes/image-sizes.php:6
+msgid "Open Graph"
+msgstr ""
+
+#: includes/admin/save-options.php:6
+msgid "You aren't allowed to be on this page."
+msgstr ""
+
+#: includes/admin/settings-api.php:39
+msgid "Open Graph Enable"
+msgstr ""
+
+#: includes/blocks/recipe-summary.php:36
+#: build/blocks/recipe-summary/index.js:11783
+#: src/blocks/recipe-summary/index.js:56
+#: build/blocks/recipe-summary/index.js:9362
+msgid "Prep Time"
+msgstr ""
+
+#: includes/blocks/recipe-summary.php:44
+#: build/blocks/recipe-summary/index.js:11799
+#: src/blocks/recipe-summary/index.js:67
+#: build/blocks/recipe-summary/index.js:9373
+msgid "Cook Time"
+msgstr ""
+
+#: includes/blocks/recipe-summary.php:55
+#: build/blocks/recipe-summary/index.js:11820
+#: build/blocks/recipe-summary/index.js:11829
+#: src/blocks/recipe-summary/index.js:81 src/blocks/recipe-summary/index.js:87
+#: build/blocks/recipe-summary/index.js:9387
+#: build/blocks/recipe-summary/index.js:9393
+msgid "Course"
+msgstr ""
+
+#: includes/blocks/recipe-summary.php:63 includes/recipe_post_type.php:52
+#: build/blocks/recipe-summary/index.js:11836
+#: src/blocks/recipe-summary/index.js:92
+#: build/blocks/recipe-summary/index.js:9398
+msgid "Cuisine"
+msgstr ""
+
+#: includes/blocks/recipe-summary.php:73
+#: build/blocks/recipe-summary/index.js:11856
+#: src/blocks/recipe-summary/index.js:116
+#: build/blocks/recipe-summary/index.js:9422
+msgid "Rating"
+msgstr ""
+
+#: includes/blocks/search-form.php:11 includes/blocks/search-form.php:15
+#: includes/blocks/search-form.php:17
+msgid "Search"
+msgstr ""
+
+#: includes/image-sizes.php:5
+msgid "Team Member"
+msgstr ""
+
+#: includes/recipe_post_type.php:5
+msgctxt "Post type general name"
+msgid "Recipes"
+msgstr ""
+
+#: includes/recipe_post_type.php:6
+msgctxt "Post type singular name"
+msgid "Recipe"
+msgstr ""
+
+#: includes/recipe_post_type.php:7
+msgctxt "Admin Menu text"
+msgid "Recipes"
+msgstr ""
+
+#: includes/recipe_post_type.php:8
+msgctxt "Add New on Toolbar"
+msgid "Recipe"
+msgstr ""
+
+#: includes/recipe_post_type.php:9
+msgid "Add New"
+msgstr ""
+
+#: includes/recipe_post_type.php:10
+msgid "Add New Recipe"
+msgstr ""
+
+#: includes/recipe_post_type.php:11
+msgid "New Recipe"
+msgstr ""
+
+#: includes/recipe_post_type.php:12
+msgid "Edit Recipe"
+msgstr ""
+
+#: includes/recipe_post_type.php:13
+msgid "View Recipe"
+msgstr ""
+
+#: includes/recipe_post_type.php:14
+msgid "All Recipes"
+msgstr ""
+
+#: includes/recipe_post_type.php:15
+msgid "Search Recipes"
+msgstr ""
+
+#: includes/recipe_post_type.php:16
+msgid "Parent Recipes:"
+msgstr ""
+
+#: includes/recipe_post_type.php:17
+msgid "No Recipes found."
+msgstr ""
+
+#: includes/recipe_post_type.php:18
+msgid "No Recipes found in Trash."
+msgstr ""
+
+#: includes/recipe_post_type.php:19
+msgctxt ""
+"Overrides the “Featured Image” phrase for this post type. Added in 4.3"
+msgid "Recipe Cover Image"
+msgstr ""
+
+#: includes/recipe_post_type.php:20
+msgctxt ""
+"Overrides the “Set featured image” phrase for this post type. Added in 4.3"
+msgid "Set cover image"
+msgstr ""
+
+#: includes/recipe_post_type.php:21
+msgctxt ""
+"Overrides the “Remove featured image” phrase for this post type. Added in 4.3"
+msgid "Remove cover image"
+msgstr ""
+
+#: includes/recipe_post_type.php:22
+msgctxt ""
+"Overrides the “Use as featured image” phrase for this post type. Added in 4.3"
+msgid "Use as cover image"
+msgstr ""
+
+#: includes/recipe_post_type.php:23
+msgctxt ""
+"The post type archive label used in nav menus. Default “Post Archives”. "
+"Added in 4.4"
+msgid "Recipe archives"
+msgstr ""
+
+#: includes/recipe_post_type.php:24
+msgctxt ""
+"Overrides the “Insert into post”/”Insert into page” phrase (used when "
+"inserting media into a post). Added in 4.4"
+msgid "Insert into Recipe"
+msgstr ""
+
+#: includes/recipe_post_type.php:25
+msgctxt ""
+"Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used "
+"when viewing media attached to a post). Added in 4.4"
+msgid "Uploaded to this Recipe"
+msgstr ""
+
+#: includes/recipe_post_type.php:26
+msgctxt ""
+"Screen reader text for the filter links heading on the post type listing "
+"screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4"
+msgid "Filter Recipes list"
+msgstr ""
+
+#: includes/recipe_post_type.php:27
+msgctxt ""
+"Screen reader text for the pagination heading on the post type listing "
+"screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4"
+msgid "Recipes list navigation"
+msgstr ""
+
+#: includes/recipe_post_type.php:28
+msgctxt ""
+"Screen reader text for the items list heading on the post type listing "
+"screen. Default “Posts list”/”Pages list”. Added in 4.4"
+msgid "Recipes list"
+msgstr ""
+
+#: includes/recipe_post_type.php:45
+msgid "A custom post type for recipes"
+msgstr ""
+
+#: includes/recipe_post_type.php:59
+msgid "A URL for more information"
+msgstr ""
+
+#: includes/recipe_post_type.php:67
+msgid "The rating for a recipe"
+msgstr ""
+
+#: build/block-editor/index.js:117 build/block-editor/index.js:128
+#: src/block-editor/neon-format.js:8 src/block-editor/neon-format.js:17
+#: build/block-editor/index.js:18 build/block-editor/index.js:27
+msgid "Neon"
+msgstr ""
+
+#: build/block-editor/index.js:180 src/block-editor/sidebar.js:19
+#: build/block-editor/index.js:59
+msgid "Udemy Plus Sidebar"
+msgstr ""
+
+#: build/block-editor/index.js:182 src/block-editor/sidebar.js:21
+#: build/block-editor/index.js:61
+msgid "Opengraph Options"
+msgstr ""
+
+#: build/block-editor/index.js:184 build/blocks/daily-recipe/index.js:321
+#: build/blocks/popular-recipes/index.js:356
+#: build/blocks/team-member/index.js:216 src/block-editor/sidebar.js:23
+#: src/blocks/daily-recipe/index.js:43 src/blocks/popular-recipes/index.js:87
+#: src/blocks/team-member/edit.js:124 build/block-editor/index.js:63
+#: build/blocks/daily-recipe/index.js:102
+#: build/blocks/popular-recipes/index.js:146
+#: build/blocks/team-member/index.js:133
+msgid "Title"
+msgstr ""
+
+#: build/block-editor/index.js:192 src/block-editor/sidebar.js:32
+#: build/block-editor/index.js:72
+msgid "Description"
+msgstr ""
+
+#: build/block-editor/index.js:200 src/block-editor/sidebar.js:41
+#: build/block-editor/index.js:81
+msgid "Override Featured Image"
+msgstr ""
+
+#: build/block-editor/index.js:202 src/block-editor/sidebar.js:43
+#: build/block-editor/index.js:83
+msgid ""
+"By default, the featured image will be used as the image. Check this option "
+"to use a different image."
+msgstr ""
+
+#: build/block-editor/index.js:220 src/block-editor/sidebar.js:60
+#: build/block-editor/index.js:100
+msgid "Change Image"
+msgstr ""
+
+#: build/blocks/auth-modal/index.js:276 build/blocks/header-tools/index.js:276
+#: build/blocks/page-header/index.js:275 src/blocks/auth-modal/index.js:19
+#: src/blocks/header-tools/index.js:19 src/blocks/page-header/index.js:18
+#: build/blocks/auth-modal/index.js:76 build/blocks/header-tools/index.js:76
+#: build/blocks/page-header/index.js:75
+msgid "General"
+msgstr ""
+
+#: build/blocks/auth-modal/index.js:278 src/blocks/auth-modal/index.js:21
+#: build/blocks/auth-modal/index.js:78
+msgid "Show Register"
+msgstr ""
+
+#: build/blocks/auth-modal/index.js:279 src/blocks/auth-modal/index.js:24
+#: build/blocks/auth-modal/index.js:81
+msgid "Showing registration form"
+msgstr ""
+
+#: build/blocks/auth-modal/index.js:279 src/blocks/auth-modal/index.js:25
+#: build/blocks/auth-modal/index.js:82
+msgid "Hiding registration form"
+msgstr ""
+
+#: build/blocks/auth-modal/index.js:288 src/blocks/auth-modal/index.js:33
+#: build/blocks/auth-modal/index.js:90
+msgid ""
+"This block is not previewable from the editor. View your site for a live "
+"demo."
+msgstr ""
+
+#: build/blocks/fancy-header/index.js:287 build/blocks/search-form/index.js:280
+#: src/blocks/fancy-header/index.js:18 src/blocks/search-form/index.js:24
+#: build/blocks/fancy-header/index.js:75 build/blocks/search-form/index.js:80
+msgid "Colors"
+msgstr ""
+
+#: build/blocks/fancy-header/index.js:307 src/blocks/fancy-header/index.js:33
+#: build/blocks/fancy-header/index.js:90
+msgid "Enter heading"
+msgstr ""
+
+#: build/blocks/header-tools/index.js:278 src/blocks/header-tools/index.js:21
+#: build/blocks/header-tools/index.js:78
+msgid "Show Login/Register link"
+msgstr ""
+
+#: build/blocks/header-tools/index.js:281 src/blocks/header-tools/index.js:24
+#: build/blocks/header-tools/index.js:81
+msgid "No"
+msgstr ""
+
+#: build/blocks/header-tools/index.js:284 src/blocks/header-tools/index.js:25
+#: build/blocks/header-tools/index.js:82
+msgid "Yes"
+msgstr ""
+
+#: build/blocks/page-header/index.js:277 src/blocks/page-header/index.js:20
+#: build/blocks/page-header/index.js:77
+msgid "Show category"
+msgstr ""
+
+#: build/blocks/page-header/index.js:282 src/blocks/page-header/index.js:25
+#: build/blocks/page-header/index.js:82
+msgid "Category shown"
+msgstr ""
+
+#: build/blocks/page-header/index.js:282 src/blocks/page-header/index.js:26
+#: build/blocks/page-header/index.js:83
+msgid "Custom text shown"
+msgstr ""
+
+#: build/blocks/page-header/index.js:290 src/blocks/page-header/index.js:37
+#: build/blocks/page-header/index.js:94
+msgid "Category: Some category"
+msgstr ""
+
+#: build/blocks/page-header/index.js:293 src/blocks/page-header/index.js:40
+#: build/blocks/page-header/index.js:97
+msgid "Heading"
+msgstr ""
+
+#: build/blocks/popular-recipes/index.js:322
+#: build/blocks/team-member/index.js:180
+#: build/blocks/team-members-group/index.js:279
+#: src/blocks/popular-recipes/index.js:55 src/blocks/team-member/edit.js:86
+#: src/blocks/team-members-group/index.js:25
+#: build/blocks/popular-recipes/index.js:114
+#: build/blocks/team-member/index.js:95
+#: build/blocks/team-members-group/index.js:82
+msgid "Settings"
+msgstr ""
+
+#: build/blocks/recipe-summary/index.js:11792
+#: src/blocks/recipe-summary/index.js:62
+#: build/blocks/recipe-summary/index.js:9368
+msgid "Prep time"
+msgstr ""
+
+#: build/blocks/recipe-summary/index.js:11808
+#: src/blocks/recipe-summary/index.js:73
+#: build/blocks/recipe-summary/index.js:9379
+msgid "Cook time"
+msgstr ""
+
+#: build/blocks/search-form/index.js:282 src/blocks/search-form/index.js:27
+#: build/blocks/search-form/index.js:83
+msgid "Background Color"
+msgstr ""
+
+#: build/blocks/search-form/index.js:288 src/blocks/search-form/index.js:32
+#: build/blocks/search-form/index.js:88
+msgid "Text Color"
+msgstr ""
+
+#: build/blocks/team-member/index.js:159 src/blocks/team-member/edit.js:63
+#: build/blocks/team-member/index.js:72
+msgid "Replace Image"
+msgstr ""
+
+#: build/blocks/team-member/index.js:176 src/blocks/team-member/edit.js:81
+#: build/blocks/team-member/index.js:90
+msgid "Remove Image"
+msgstr ""
+
+#: build/blocks/team-member/index.js:182 src/blocks/team-member/edit.js:89
+#: build/blocks/team-member/index.js:98
+msgid "Alt Attribute"
+msgstr ""
+
+#: build/blocks/team-member/index.js:187 src/blocks/team-member/edit.js:92
+#: build/blocks/team-member/index.js:101
+msgid "Description of your image for screen readers."
+msgstr ""
+
+#: build/blocks/team-member/index.js:209 src/blocks/team-member/edit.js:118
+#: build/blocks/team-member/index.js:127
+msgid "Name"
+msgstr ""
+
+#: build/blocks/team-member/index.js:227 src/blocks/team-member/edit.js:133
+#: build/blocks/team-member/index.js:142
+msgid "Member bio"
+msgstr ""
+
+#: build/blocks/team-member/index.js:249 src/blocks/team-member/edit.js:160
+#: build/blocks/team-member/index.js:169
+msgid "Add social media handle"
+msgstr ""
+
+#: build/blocks/team-member/index.js:275 src/blocks/team-member/edit.js:182
+#: build/blocks/team-member/index.js:191
+msgid "URL"
+msgstr ""
+
+#: build/blocks/team-member/index.js:289 src/blocks/team-member/edit.js:195
+#: build/blocks/team-member/index.js:204
+msgid "Icon"
+msgstr ""
+
+#: build/blocks/team-member/index.js:312 src/blocks/team-member/edit.js:214
+#: build/blocks/team-member/index.js:223
+msgid "Remove"
+msgstr ""
+
+#: build/blocks/team-members-group/index.js:281
+#: src/blocks/team-members-group/index.js:27
+#: build/blocks/team-members-group/index.js:84
+msgid "Columns"
+msgstr ""
+
+#: build/blocks/team-members-group/index.js:289
+#: src/blocks/team-members-group/index.js:34
+#: build/blocks/team-members-group/index.js:91
+msgid "Image Shape"
+msgstr ""
+
+#: build/blocks/team-members-group/index.js:292
+#: src/blocks/team-members-group/index.js:37
+#: build/blocks/team-members-group/index.js:94
+msgid "Hexagon"
+msgstr ""
+
+#: build/blocks/team-members-group/index.js:295
+#: src/blocks/team-members-group/index.js:38
+#: build/blocks/team-members-group/index.js:95
+msgid "Rabbet"
+msgstr ""
+
+#: build/blocks/team-members-group/index.js:298
+#: src/blocks/team-members-group/index.js:39
+#: build/blocks/team-members-group/index.js:96
+msgid "Pentagon"
+msgstr ""
+
+#: build/blocks/auth-modal/block.json src/blocks/auth-modal/block.json
+msgctxt "block title"
+msgid "Authentication Modal"
+msgstr ""
+
+#: build/blocks/auth-modal/block.json src/blocks/auth-modal/block.json
+msgctxt "block description"
+msgid "Adds an authentication modal"
+msgstr ""
+
+#: build/blocks/daily-recipe/block.json src/blocks/daily-recipe/block.json
+msgctxt "block title"
+msgid "Daily Recipe"
+msgstr ""
+
+#: build/blocks/daily-recipe/block.json src/blocks/daily-recipe/block.json
+msgctxt "block description"
+msgid "Displays a random recipe each day"
+msgstr ""
+
+#: build/blocks/fancy-header/block.json src/blocks/fancy-header/block.json
+msgctxt "block title"
+msgid "Fancy header"
+msgstr ""
+
+#: build/blocks/fancy-header/block.json src/blocks/fancy-header/block.json
+msgctxt "block description"
+msgid "Add a header with a hover effect"
+msgstr ""
+
+#: build/blocks/fancy-header/block.json src/blocks/fancy-header/block.json
+msgctxt "block keyword"
+msgid "header"
+msgstr ""
+
+#: build/blocks/fancy-header/block.json src/blocks/fancy-header/block.json
+msgctxt "block keyword"
+msgid "underline"
+msgstr ""
+
+#: build/blocks/fancy-header/block.json src/blocks/fancy-header/block.json
+msgctxt "block keyword"
+msgid "hover"
+msgstr ""
+
+#: build/blocks/header-tools/block.json src/blocks/header-tools/block.json
+msgctxt "block title"
+msgid "Header Tools"
+msgstr ""
+
+#: build/blocks/header-tools/block.json src/blocks/header-tools/block.json
+msgctxt "block description"
+msgid "Adds a header toolbar that contains an authentication link"
+msgstr ""
+
+#: build/blocks/page-header/block.json src/blocks/page-header/block.json
+msgctxt "block title"
+msgid "Page Header"
+msgstr ""
+
+#: build/blocks/page-header/block.json src/blocks/page-header/block.json
+msgctxt "block description"
+msgid "Adds a page header"
+msgstr ""
+
+#: build/blocks/popular-recipes/block.json
+#: src/blocks/popular-recipes/block.json
+msgctxt "block title"
+msgid "Popular Recipes"
+msgstr ""
+
+#: build/blocks/popular-recipes/block.json
+#: src/blocks/popular-recipes/block.json
+msgctxt "block description"
+msgid "Adds a list of highly rated recipes"
+msgstr ""
+
+#: build/blocks/recipe-summary/block.json src/blocks/recipe-summary/block.json
+msgctxt "block title"
+msgid "Recipe Summary"
+msgstr ""
+
+#: build/blocks/recipe-summary/block.json src/blocks/recipe-summary/block.json
+msgctxt "block description"
+msgid "Adds a summary section for a recipe"
+msgstr ""
+
+#: build/blocks/search-form/block.json src/blocks/search-form/block.json
+msgctxt "block title"
+msgid "Search form"
+msgstr ""
+
+#: build/blocks/search-form/block.json src/blocks/search-form/block.json
+msgctxt "block description"
+msgid "Add a search form"
+msgstr ""
+
+#: build/blocks/search-form/block.json src/blocks/search-form/block.json
+msgctxt "block keyword"
+msgid "search"
+msgstr ""
+
+#: build/blocks/search-form/block.json src/blocks/search-form/block.json
+msgctxt "block keyword"
+msgid "form"
+msgstr ""
+
+#: build/blocks/team-member/block.json src/blocks/team-member/block.json
+msgctxt "block title"
+msgid "Team Member"
+msgstr ""
+
+#: build/blocks/team-member/block.json src/blocks/team-member/block.json
+msgctxt "block description"
+msgid "Adds a team member"
+msgstr ""
+
+#: build/blocks/team-members-group/block.json
+#: src/blocks/team-members-group/block.json
+msgctxt "block title"
+msgid "Team Members Group"
+msgstr ""
+
+#: build/blocks/team-members-group/block.json
+#: src/blocks/team-members-group/block.json
+msgctxt "block description"
+msgid "Adds a group for adding team members"
+msgstr ""
